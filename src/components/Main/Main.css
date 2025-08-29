@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../../vendor/Fonts/roboto-400-regular.woff2") format("woff2");
+}
+.main-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+.main__title {
+  margin: 80px 0 32px 0;
+  width: 608px;
+  height: 128;
+  opacity: 1;
+  font-family: "Roboto Slab", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 64px;
+  letter-spacing: 0px;
+  color: white;
+}
+.main__text {
+  margin: 0 0 32px;
+  width: 608;
+  height: 24;
+  opacity: 1;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: white;
+}

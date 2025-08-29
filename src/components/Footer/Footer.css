@@ -1,0 +1,39 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  max-width: 1385px;
+  font-family: Cabinet Grotesk, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  vertical-align: bottom;
+}
+.footer__developer {
+  display: flex;
+  justify-content: space-between;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0px;
+  color: #b6bcbf;
+}
+.footer__social {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  cursor: pointer;
+}
+.footer__social > * {
+  margin-right: 40px;
+}
+
+.footer__social > *:last-child {
+  margin-right: 24px;
+}
+.footer__year {
+  width: 105px;
+  height: 39px;
+}

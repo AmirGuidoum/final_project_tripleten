@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  align-items: center;
+  border: none;
+  border-bottom: 1px solid #ffffff33;
+  padding: 0px 104px 0px 104px;
+  border: bottom 1px red;
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: transparent;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  gap: 1000px;
+  justify-content: space-between;
+}
+.header__logo {
+  background-color: transparent;
+  cursor: pointer;
+  margin: 30px 0 24px 0;
+  width: 200px;
+  height: 24px;
+}
+.header__auth-buttons {
+  display: flex;
+  gap: 24px;
+  padding: 0;
+}
+.header__home {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  text-align: center;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  cursor: pointer;
+  color: white;
+}
+.header__signin {
+  width: 176px;
+  height: 48px;
+  opacity: 1;
+  top: 19px;
+  left: 1160px;
+  padding: 11.88px 12px 15.33px 12px;
+  border-width: 1px;
+  border-radius: 100px;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+  margin: 19px 0 13px 0;
+}
