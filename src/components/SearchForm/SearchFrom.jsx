@@ -13,15 +13,32 @@ function SearchForm({ onSearch }) {
   return (
     <div className="search-wrapper">
       <form className="search-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Enter topic"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-        <button type="submit" aria-label="Search">
-          Search
-        </button>
+        {window.innerWidth > 320 ? (
+          <>
+            <input
+              type="text"
+              placeholder="Enter topic"
+              className="search__input"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
+            <button type="submit" aria-label="Search">
+              Search
+            </button>
+          </>
+        ) : (
+          <>
+            <input
+              type="text"
+              placeholder="Enter topic"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
+            <button type="submit" className="large-button">
+              Search
+            </button>
+          </>
+        )}
       </form>
     </div>
   );

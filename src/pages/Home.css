@@ -1,0 +1,12 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.home__background {
+  width: 100%;
+  background-image: url("../assets/background-layout.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

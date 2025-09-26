@@ -6,7 +6,7 @@ export default function RegisterModal({
   close,
   activeModal,
   onLogin,
-  onOpenSignupModal,
+
   loginError,
   handleAddClickLogIn,
 }) {
@@ -15,10 +15,10 @@ export default function RegisterModal({
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
-
+  const [userName, setUserName] = useState("");
   const handleEmailChange = (e) => setEmail(e.target.value);
   const handlePasswordChange = (e) => setPassword(e.target.value);
-
+  const handleUserNameChange = (e) => setUserName(e.target.value);
   const validate = () => {
     const newErrors = {};
     if (!email) newErrors.email = "Email is required";
@@ -33,6 +33,7 @@ export default function RegisterModal({
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
+
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
@@ -109,12 +110,12 @@ export default function RegisterModal({
           id="registerusername"
           className="modal__input"
           placeholder="Enter user name"
-          value={password}
-          onChange={handlePasswordChange}
+          value={userName}
+          onChange={handleUserNameChange}
           required
         />
         {errors.password && submitted && (
-          <span className="modal__error">{errors.password}</span>
+          <span className="modal__error">{errors.userName}</span>
         )}
       </label>
 

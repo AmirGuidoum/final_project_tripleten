@@ -8,10 +8,14 @@ function Footer() {
         &copy; 2025 Supersite, Powered by News API
       </p>
       <div className="footer__social">
-        <p>Home</p>
-        <p>Triple Ten</p>
-        <img src={githubIcon} alt="github Icon" />
-        <img src={facebookIcon} alt="facebook Icon" />
+        <div className="footer__pages">
+          <p className="footer__paragraph">Home</p>
+          <p className="footer__paragraph">Triple Ten</p>
+        </div>
+        <div className="footer__icons">
+          <img src={githubIcon} alt="github Icon" />
+          <img src={facebookIcon} alt="facebook Icon" />
+        </div>
       </div>
     </footer>
   );

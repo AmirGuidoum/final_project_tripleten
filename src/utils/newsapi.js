@@ -24,5 +24,8 @@ export function filterArticles(articles) {
     publishedAt: article.publishedAt,
     url: article.url,
     urlToImage: article.urlToImage,
+    source: {
+      name: article.source?.name || "Unknown Source",
+    },
   }));
 }

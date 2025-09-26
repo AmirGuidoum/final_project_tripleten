@@ -8,13 +8,13 @@ export default function LoginModal({
   onLogin,
   onOpenSignupModal,
   loginError,
+  handleLogin,
 }) {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
-
   const handleEmailChange = (e) => setEmail(e.target.value);
   const handlePasswordChange = (e) => setPassword(e.target.value);
 
@@ -99,7 +99,7 @@ export default function LoginModal({
       </label>
 
       <div className="modal__button-container">
-        <button type="submit" className="modal__submit">
+        <button onClick={handleLogin} type="submit" className="modal__submit">
           Sign in
         </button>
         <div>
