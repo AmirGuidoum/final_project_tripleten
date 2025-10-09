@@ -1,0 +1,44 @@
+import "./Footer.css";
+import facebookIcon from "../../assets/facebook.svg";
+import githubIcon from "../../assets/github.svg";
+import { useNavigate } from "react-router-dom";
+function Footer() {
+  const navigate = useNavigate();
+  return (
+    <footer className="footer">
+      <p className="footer__developer">
+        &copy; 2025 Supersite, Powered by News API
+      </p>
+      <div className="footer__social">
+        <div className="footer__pages">
+          <p onClick={() => navigate("/")} className="footer__paragraph">
+            Home
+          </p>
+          <p
+            onClick={() => window.open("https://tripleten.com/", "_blank")}
+            className="footer__paragraph"
+          >
+            Triple Ten
+          </p>
+        </div>
+        <div className="footer__icons">
+          <img
+            onClick={() =>
+              window.open("https://github.com/AmirGuidoum", "_blank")
+            }
+            src={githubIcon}
+            alt="github Icon"
+          />
+          <img
+            onClick={() =>
+              window.open("https://facebook.com/tripleten.tech", "_blank")
+            }
+            src={facebookIcon}
+            alt="facebook Icon"
+          />
+        </div>
+      </div>
+    </footer>
+  );
+}
+export default Footer;
