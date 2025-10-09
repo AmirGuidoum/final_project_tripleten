@@ -47,6 +47,13 @@
   display: flex;
   gap: 40px;
 }
+.footer__paragraph:hover {
+  opacity: 0.8;
+}
+
+.footer__icons:hover {
+  opacity: 0.8;
+}
 @media (max-width: 768px) {
   .footer {
     padding: 0 40px;

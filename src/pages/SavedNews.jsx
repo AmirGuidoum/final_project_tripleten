@@ -37,11 +37,11 @@ function SavedNews({
       />
       <div className="savednews__user-info">
         <p className="savednews__saved-articles">Saved articles</p>
-        <h2 className="savednews__title">
+        <h1 className="savednews__title">
           {userName}, you have {savedArticles.length} saved <br />
           articles
           {savedArticles.length !== 1 ? "s" : ""}
-        </h2>
+        </h1>
 
         <p className="savednews__keywords">
           By keywords:

@@ -33,24 +33,26 @@ function Home({
           handleLogout={handleLogout}
           handlenavigationmodal={handlenavigationmodal}
         />
-        <Main onSearch={onSearch} />
+        <main>
+          <Main onSearch={onSearch} />
+          {hasSearched && (
+            <NewsCards
+              articles={articles.slice(0, visibleCount)}
+              showMore={visibleCount < articles.length}
+              onShowMore={showMore}
+              onSignin={onSignin}
+              isLoading={isLoading}
+              isLoggedin={isLoggedIn}
+              savedArticles={savedArticles}
+              handleSaveArticle={handleSaveArticle}
+              handleUnsaveArticle={handleUnsaveArticle}
+              userName={userName}
+            />
+          )}
+          <About />
+        </main>
       </div>
 
-      {hasSearched && (
-        <NewsCards
-          articles={articles.slice(0, visibleCount)}
-          showMore={visibleCount < articles.length}
-          onShowMore={showMore}
-          onSignin={onSignin}
-          isLoading={isLoading}
-          isLoggedin={isLoggedIn}
-          savedArticles={savedArticles}
-          handleSaveArticle={handleSaveArticle}
-          handleUnsaveArticle={handleUnsaveArticle}
-          userName={userName}
-        />
-      )}
-      <About />
       <Footer />
     </div>
   );

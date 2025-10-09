@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Router, Routes, Route } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import newsexplorer from "../../assets/newsexplorer.svg";
@@ -45,19 +46,38 @@ function Header({
           alt="Logo"
         />
 
-        <div className="header__auth-buttons">
-          <button onClick={() => navigate("/")} className="header__home">
+        <nav className="header__auth-buttons">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `header__home ${isSavedPage ? "header__link_black" : ""} ${
+                isActive
+                  ? isSavedPage
+                    ? "header__link_active-black"
+                    : "header__link_active-white"
+                  : ""
+              }`
+            }
+          >
             Home
-          </button>
+          </NavLink>
 
           {isLoggedIn ? (
             <>
-              <button
-                onClick={() => navigate("/saved-news")}
-                className="header__saved"
+              <NavLink
+                to="/saved-news"
+                className={({ isActive }) =>
+                  `header__saved ${isSavedPage ? "header__link_black" : ""} ${
+                    isActive
+                      ? isSavedPage
+                        ? "header__link_active-black"
+                        : "header__link_active-white"
+                      : ""
+                  }`
+                }
               >
                 Saved articles
-              </button>
+              </NavLink>
               <button
                 onClick={handleLogout}
                 type="button"
@@ -79,7 +99,7 @@ function Header({
               Sign in
             </button>
           )}
-        </div>
+        </nav>
       </div>
     </header>
   );

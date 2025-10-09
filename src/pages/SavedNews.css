@@ -1,86 +1,104 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .savednews {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
+  padding: 0;
 }
 
 .savednews__content {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
+
 .savednews__text {
   color: rgb(0, 0, 0);
   margin: 0;
 }
+
 .savednews__keywords {
   margin: 0;
   color: black;
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
-  leading-trim: NONE;
   line-height: 24px;
-  letter-spacing: 0px;
+  letter-spacing: 0;
 }
+
 .savednews__saved-articles {
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
+  line-height: 24px;
   color: gray;
   margin: 0;
 }
+
 .savednews__title {
   margin: 0;
   font-family: "Roboto Slab", Arial, sans-serif;
   font-weight: 400;
   font-size: 40px;
-  leading-trim: NONE;
   line-height: 46px;
-  letter-spacing: 0px;
+  letter-spacing: 0;
 }
-.savednews__user-info {
-  margin: 0;
-  padding: 0 104px;
 
-  font-family: "Roboto Slab", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 40px;
-  margin: 40px 0 56px 0;
+.savednews__user-info {
+  margin: 40px 104px 56px;
+  width: 100%;
+  max-width: 768px;
   display: flex;
   flex-direction: column;
   gap: 30px;
+  font-family: "Roboto Slab", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 40px;
 }
+
 .savednews__spans {
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
-  leading-trim: NONE;
   line-height: 24px;
-  letter-spacing: 0px;
+  letter-spacing: 0;
 }
+
 @media (max-width: 768px) {
   .savednews__user-info {
     padding: 0 40px;
-    gap: 8px;
+    gap: 16px;
+    font-size: 36px;
+    margin: 24px 0 32px 0;
   }
 }
+
 @media (max-width: 320px) {
   .savednews__title {
-    font-weight: 400;
     font-size: 30px;
     line-height: 34px;
-    letter-spacing: 0px;
   }
+
   .savednews__user-info {
-    padding: 0 10px;
+    padding: 0 12px;
     gap: 16px;
+    font-size: 28px;
   }
+
   .savednews__saved-articles {
     font-size: 14px;
-
     line-height: 24px;
-    letter-spacing: 0px;
+  }
+
+  .savednews__spans {
+    font-size: 16px;
   }
 }

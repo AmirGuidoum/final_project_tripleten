@@ -1,7 +1,7 @@
 .search-wrapper {
   display: flex;
   justify-content: center;
-  margin: 40px auto;
+  margin: 0 auto 80px;
   width: 100%;
 }
 
@@ -12,6 +12,7 @@
   overflow: hidden;
   max-width: 608px;
   width: 100%;
+  height: 64px;
   background-color: #fff;
 }
 
@@ -37,6 +38,7 @@
   border-radius: 999px;
   transition: background-color 0.3s;
   margin-left: 8px;
+  width: 168px;
 }
 
 .search-form button:hover {
@@ -48,6 +50,9 @@
   }
   .search-form {
     max-width: 452px;
+  }
+  .search-form button {
+    width: 160px;
   }
 }
 @media (max-width: 320px) {
@@ -64,7 +69,7 @@
   }
 
   .search-form input {
-    width: 256px;
+    width: 288px;
     height: 56px;
     border-radius: 100px;
     padding: 16px 17px;

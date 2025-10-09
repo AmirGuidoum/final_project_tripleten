@@ -47,6 +47,9 @@
   width: 68px;
   color: white;
 }
+.header__home:hover {
+  opacity: 0.7;
+}
 .header__menu {
   visibility: hidden;
   height: 25px;
@@ -98,6 +101,9 @@
   border: none;
   color: white;
 }
+.header__saved:hover {
+  opacity: 0.7;
+}
 .header__user {
   border-radius: 30px;
   width: 112px;
@@ -112,6 +118,12 @@
   gap: 10px;
   padding: 12px 15px 12px 19px;
 }
+.header__signin:hover {
+  opacity: 0.7;
+}
+.header__user:hover {
+  opacity: 0.7;
+}
 .header__container_signedin-page button {
   color: rgb(0, 0, 0);
 }
@@ -125,6 +137,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.header__link_active-white {
+  border-bottom: 2px solid white;
+  color: white;
+}
+
+.header__link_active-black {
+  border-bottom: 2px solid black;
+  color: black;
+}
+.header__link_black {
+  color: black;
 }
 @media (max-width: 768px) {
   .header {
