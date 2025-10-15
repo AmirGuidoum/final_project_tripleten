@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("../../vendor/Fonts/roboto-slab-400-regular.woff2") format("woff2");
+}
+.newscards__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.newscards__list > :last-child {
+  justify-self: center;
+}
+.newscards__show-more {
+  margin: 50px 0 80px 0;
+  width: 288px;
+  height: 64px;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+}
+.newscards__show-more:hover {
+  opacity: 80%;
+}
+.newscards__title {
+  font-family: Roboto Slab, "arial", "sans-serif";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 46px;
+  letter-spacing: 0px;
+  margin: 18px 0 64px 0;
+}
+.newscards {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 82%);
+  padding: 62px 104px;
+}
+.newscards > :last-child {
+  align-self: center;
+}
+.newscards__preloader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  background-color: #f5f6f7;
+}
+@media (max-width: 768px) {
+  .newscards__list {
+    gap: 8px;
+  }
+  .newscards__title {
+    width: 336px;
+    height: 34px;
+  }
+  .newscards__show-more {
+    width: 240px;
+    height: 56px;
+    margin: 32px 0 40px 0;
+  }
+  .newscards {
+    padding: 32px 40px;
+  }
+}
+@media (max-width: 320px) {
+  .newscards {
+    padding: 24px 16px;
+  }
+  .newscards__list {
+    gap: 8px;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 auto;
+  }
+  .newscards__show-more {
+    width: 288px;
+    height: 56px;
+    margin: 32px 0 40px 0;
+  }
+  .newscards__title {
+    max-width: 320px;
+    width: 100%;
+  }
+}

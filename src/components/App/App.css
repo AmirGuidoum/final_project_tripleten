@@ -1,0 +1,25 @@
+.page {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.page__content {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .page {
+    max-width: 786px;
+  }
+}
+@media (max-width: 320px) {
+  .page {
+    max-width: 320px;
+  }
+}
