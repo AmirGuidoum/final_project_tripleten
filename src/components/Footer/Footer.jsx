@@ -28,6 +28,7 @@ function Footer() {
             }
             src={githubIcon}
             alt="github Icon"
+            id="github-id"
           />
           <img
             onClick={() =>
@@ -35,6 +36,7 @@ function Footer() {
             }
             src={facebookIcon}
             alt="facebook Icon"
+            id="facebook-id"
           />
         </div>
       </nav>

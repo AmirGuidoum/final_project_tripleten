@@ -48,11 +48,14 @@
   gap: 40px;
 }
 .footer__paragraph:hover {
-  opacity: 0.8;
+  opacity: 0.5;
+}
+#github-id:hover {
+  opacity: 0.5;
 }
 
-.footer__icons:hover {
-  opacity: 0.8;
+#facebook-id:hover {
+  opacity: 0.5;
 }
 @media (max-width: 768px) {
   .footer {
