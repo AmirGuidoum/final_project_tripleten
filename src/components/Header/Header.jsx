@@ -1,14 +1,10 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import { Router, Routes, Route } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+
 import newsexplorer from "../../assets/newsexplorer.svg";
 import newsexplorerblack from "../../assets/newsexplorerblack.svg";
 import logoutwhite from "../../assets/logoutwhite.svg";
 import logoutblack from "../../assets/logoutblack.svg";
 
-import menu from "../../assets/menu.svg";
 import { useLocation } from "react-router-dom";
 
 import "./Header.css";
@@ -20,7 +16,6 @@ function Header({
   handleLogout,
   handlenavigationmodal,
 }) {
-  const navigate = useNavigate();
   const location = useLocation();
   const isSavedPage = location.pathname === "/saved-news";
   return (

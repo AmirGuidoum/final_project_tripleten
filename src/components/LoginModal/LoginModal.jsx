@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
-
 export default function LoginModal({
   close,
   activeModal,
@@ -17,18 +16,18 @@ export default function LoginModal({
   const [submitted, setSubmitted] = useState(false);
   const handleEmailChange = (e) => setEmail(e.target.value);
   const handlePasswordChange = (e) => setPassword(e.target.value);
-
   const validate = () => {
     const newErrors = {};
-    if (!email) newErrors.email = "Email is required";
-    else if (!/\S+@\S+\.\S+/.test(email))
+    if (!email) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
       newErrors.email = "Please enter a valid email";
-
-    if (!password) newErrors.password = "Password is required";
-
+    }
+    if (!password) {
+      newErrors.password = "Password is required";
+    }
     return newErrors;
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
@@ -37,7 +36,6 @@ export default function LoginModal({
       setErrors(validationErrors);
       return;
     }
-
     setErrors({});
     onLogin({ email, password })
       .then(() => {
@@ -49,7 +47,6 @@ export default function LoginModal({
       })
       .catch(() => {});
   };
-
   return (
     <ModalWithForm
       isOpen={activeModal === "modallogin"}
@@ -58,12 +55,13 @@ export default function LoginModal({
       title="Sign in"
       buttonText="Log In"
     >
+      {" "}
       {(errors.api || loginError) && (
         <span className="modal__error">{errors.api || loginError}</span>
-      )}
-
+      )}{" "}
       <label htmlFor="loginemail" className="modal__label">
-        Email
+        {" "}
+        Email{" "}
         <input
           type="email"
           id="loginemail"
@@ -72,18 +70,18 @@ export default function LoginModal({
           value={email}
           onChange={handleEmailChange}
           required
-        />
+        />{" "}
         {errors.email && submitted && (
           <span className="modal__error">{errors.email}</span>
-        )}
-      </label>
-
+        )}{" "}
+      </label>{" "}
       <label
         htmlFor="loginpassword"
         className="modal__label"
         id="loginpasswordinput"
       >
-        Password
+        {" "}
+        Password{" "}
         <input
           type="password"
           id="loginpassword"
@@ -92,27 +90,30 @@ export default function LoginModal({
           value={password}
           onChange={handlePasswordChange}
           required
-        />
+        />{" "}
         {errors.password && submitted && (
           <span className="modal__error">{errors.password}</span>
-        )}
-      </label>
-
+        )}{" "}
+      </label>{" "}
       <div className="modal__button-container">
+        {" "}
         <button onClick={handleLogin} type="submit" className="modal__submit">
-          Sign in
-        </button>
+          {" "}
+          Sign in{" "}
+        </button>{" "}
         <div>
-          or &nbsp;
+          {" "}
+          or &nbsp;{" "}
           <button
             type="button"
             className="modal__signup"
             onClick={onOpenSignupModal}
           >
-            Sign Up
-          </button>
-        </div>
-      </div>
+            {" "}
+            Sign Up{" "}
+          </button>{" "}
+        </div>{" "}
+      </div>{" "}
     </ModalWithForm>
   );
 }

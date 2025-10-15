@@ -9,7 +9,7 @@ function Footer() {
       <p className="footer__developer">
         &copy; 2025 Supersite, Powered by News API
       </p>
-      <div className="footer__social">
+      <nav className="footer__social">
         <div className="footer__pages">
           <p onClick={() => navigate("/")} className="footer__paragraph">
             Home
@@ -37,7 +37,7 @@ function Footer() {
             alt="facebook Icon"
           />
         </div>
-      </div>
+      </nav>
     </footer>
   );
 }

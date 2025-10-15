@@ -15,11 +15,10 @@ function SavedNews({
   handleLogout,
   handlenavigationmodal,
 }) {
-  console.log("Name prop:", isLoggedIn);
   const combinedText = savedArticles
     .map(
       (savedArticles) =>
-        `${savedArticles.title} ${savedArticles.description || ""}`
+        `${savedArticles.title} ${savedArticles.description || ""}`,
     )
     .join(" ");
 

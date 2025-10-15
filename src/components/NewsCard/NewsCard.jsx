@@ -25,7 +25,7 @@ function NewsCard({
   const handleClick = () => {
     isSaved ? onUnsave() : onSave();
   };
-  console.log(source);
+
   return (
     <div className="newscard">
       {isLoggedin ? (

@@ -6,7 +6,7 @@ function SearchForm({ onSearch }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (query.trim() === "") return;
+    if (query.trim() === "") {return;}
     onSearch(query);
   };
 

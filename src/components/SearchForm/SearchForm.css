@@ -27,7 +27,7 @@
 }
 
 .search-form button {
-  background-color: #007bff;
+  background-color: #2f71e5;
   font-family: "Roboto", Arial, sans-serif;
   color: white;
   border: none;
@@ -42,7 +42,10 @@
 }
 
 .search-form button:hover {
-  background-color: #0056b3;
+  background-color: #347eff;
+}
+.search-form button:active {
+  background-color: #2a65cc;
 }
 @media (max-width: 768px) {
   .search-wrapper {

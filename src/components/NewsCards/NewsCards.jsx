@@ -43,7 +43,7 @@ function NewsCards({
                       year: "numeric",
                       month: "long",
                       day: "numeric",
-                    }
+                    },
                   )}
                   userName={userName}
                   title={article.title}

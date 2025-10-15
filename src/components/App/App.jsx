@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./App.css";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
+
 import LoginModal from "../LoginModal/LoginModal";
 import RegisterModal from "../RegisterModal/RegisterModal";
 import Navigation from "../navigation/navigation";
@@ -20,7 +19,7 @@ function App() {
   const [userName, setUserName] = useState("");
   const [activeModal, setActiveModal] = useState("");
   const [savedArticles, setSavedArticles] = useState([]);
-  const [articles, setArticles] = useState([]);
+  const [, setArticles] = useState([]);
 
   const closeActiveModal = () => setActiveModal("");
   const handleLogin = () => {
@@ -44,24 +43,15 @@ function App() {
         setHasSearched(true);
         setArticles(data.articles);
       })
-      .catch((error) => {
-        console.error("Error fetching news:", error);
-      })
+      .catch(() => {})
       .finally(() => {
         setLoading(false);
       });
   };
-  const addKeywordsToArticles = (articles) => {
-    return articles.map((article) => {
-      const combinedText = `${article.title} ${article.description || ""}`;
-      const keywords = extractKeywords(combinedText);
-      return { ...article, keywords };
-    });
-  };
+
   const handleShowMore = () => setVisibleCount((prev) => prev + 3);
   const handleAddClickLogIn = () => {
     setActiveModal("modallogin");
-    console.log(isLoggedIn);
   };
   const handlenavigationmodal = () => {
     setActiveModal("navigationmodal");
@@ -69,7 +59,7 @@ function App() {
   const handleAddClickSignin = () => setActiveModal("modalregister");
   const handleSaveArticle = (article) => {
     setSavedArticles((prev) =>
-      prev.some((a) => a.url === article.url) ? prev : [...prev, article]
+      prev.some((a) => a.url === article.url) ? prev : [...prev, article],
     );
   };
 
@@ -79,14 +69,14 @@ function App() {
 
   useEffect(() => {
     const handleKeyDown = (event) => {
-      if (event.key === "Escape") closeActiveModal();
+      if (event.key === "Escape") {
+        closeActiveModal();
+      }
     };
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, []);
-  useEffect(() => {
-    console.log("🔖 Saved Articles:", savedArticles);
-  }, [savedArticles]);
+  useEffect(() => {}, [savedArticles]);
   return (
     <div className="page">
       <div className="page__content">

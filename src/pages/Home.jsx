@@ -34,7 +34,11 @@ function Home({
           handlenavigationmodal={handlenavigationmodal}
         />
         <main>
-          <Main onSearch={onSearch} />
+          <section>
+            {" "}
+            <Main onSearch={onSearch} />{" "}
+          </section>
+
           {hasSearched && (
             <NewsCards
               articles={articles.slice(0, visibleCount)}
@@ -49,7 +53,11 @@ function Home({
               userName={userName}
             />
           )}
-          <About />
+
+          <section>
+            {" "}
+            <About />
+          </section>
         </main>
       </div>
 

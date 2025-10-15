@@ -21,11 +21,11 @@ export default function RegisterModal({
   const handleUserNameChange = (e) => setUserName(e.target.value);
   const validate = () => {
     const newErrors = {};
-    if (!email) newErrors.email = "Email is required";
+    if (!email) {newErrors.email = "Email is required";}
     else if (!/\S+@\S+\.\S+/.test(email))
-      newErrors.email = "Please enter a valid email";
+    {newErrors.email = "Please enter a valid email";}
 
-    if (!password) newErrors.password = "Password is required";
+    if (!password) {newErrors.password = "Password is required";}
 
     return newErrors;
   };

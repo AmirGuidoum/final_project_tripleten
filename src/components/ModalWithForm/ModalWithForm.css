@@ -118,6 +118,10 @@
   margin-top: 15px;
   margin-bottom: 16px;
 }
+.modal__submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 .modal__home {
   height: 56px;
 }
